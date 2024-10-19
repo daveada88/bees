@@ -1,27 +1,75 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --honey-gold: #f2c94c;
+  --white: #ffffff;
+  --black: #000000;
+  --menu-text-color: #333333;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--white);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+header {
+  background-color: var(--honey-gold);
+  height: 2.5cm;
+  width: 100%;
+}
+
+nav {
+  background-color: var(--black);
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+  position: relative;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: var(--black);
+  padding: 10px;
+  list-style: none;
+}
+
+nav ul ul li {
+  margin-right: 0;
+}
+
+nav ul ul li a {
+  padding: 5px 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--honey-gold);
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
